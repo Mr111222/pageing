@@ -1,5 +1,5 @@
 <template>
-  <div class="cb-paging">
+  <div class="pp-paging">
     <select v-model="currentPageSize" v-if="total&&size!='mini'" @change="changeSize">
       <option :value="item" v-for="item in pageSizes" :key="item">{{item}}条/页</option>
     </select>
@@ -15,7 +15,7 @@
 </template>
 <script>
 export default {
-  name: 'CbPaging',
+  name: 'PpPaging',
   props: {
     currentPage: { // 当前页码
       type: Number,
@@ -166,7 +166,7 @@ export default {
 
 
 <style lang="scss">
-  .cb-paging {
+  .pp-paging {
     height: 30px;
     float: right;
     margin-top: 8px;
